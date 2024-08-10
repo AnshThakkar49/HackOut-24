@@ -1,0 +1,129 @@
+/* src/components/PatientInformation.css */
+
+/* General styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(to right, #ffffff, #e3f2fd);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Top section */
+  .top {
+    background-color: #0d47a1;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: right;
+    font-size: 0.9em;
+  }
+  
+  .top a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .top a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Logo and navigation */
+  .logo {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .logo img {
+    max-width: 600px;
+    vertical-align: middle;
+  }
+  
+  .logo h1 {
+    display: inline-block;
+    font-size: 2.5em;
+    margin-left: 20px;
+    vertical-align: middle;
+    color: #0d47a1;
+    font-weight: bold;
+  }
+  
+  /* Middle section */
+  .middle {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .middle p {
+    font-size: 1.5em;
+    color: #0d47a1;
+  }
+  
+  /* Form section */
+  .form-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #333;
+  }
+  
+  .form-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-section label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #0d47a1;
+  }
+  
+  .form-section input[type="text"], .form-section input[type="number"], .form-section select {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .form-section .checkbox-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-section .checkbox-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-section button {
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #0d47a1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-section button:hover {
+    background-color: #0a3781;
+  }
+  
+  /* Selected symptoms */
+  .selected-symptoms {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  

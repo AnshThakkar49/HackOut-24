@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information</title>
+    <link rel="stylesheet" href="styles3.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="form-section">
+        <h2>Patient Information</h2>
+        <form id="patient-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="">Select Sex</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required />
+
+            <!-- Additional Input Fields for N, P, K, pH, and Rainfall -->
+            <label for="n">N (Nitrogen):</label>
+            <input type="number" id="n" name="n" required />
+
+            <label for="p">P (Phosphorus):</label>
+            <input type="number" id="p" name="p" required />
+
+            <label for="k">K (Potassium):</label>
+            <input type="number" id="k" name="k" required />
+
+            <label for="ph">pH Level:</label>
+            <input type="number" id="ph" name="ph" step="0.01" required />
+
+            <label for="rainfall">Rainfall (mm):</label>
+            <input type="number" id="rainfall" name="rainfall" required />
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('patient-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(e.target);
+            const formObject = {};
+
+            formData.forEach((value, key) => {
+                formObject[key] = value;
+            });
+
+            console.log(formObject);
+        });
+    </script>
+</body>
+</html>
