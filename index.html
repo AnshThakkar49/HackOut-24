@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation and Information</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- Top Section -->
+    <div class="top">
+        <div>Welcome 😊</div>
+    </div>
+
+    <!-- Logo and Start Section -->
+    <div class="logo">
+        <div>
+            <table>
+                <tr>
+                    <td><img src="Logo.png" alt="Hospital Logo"></td>
+                    <td><button class="small-button" onclick="showCropForm()">Start Recommendation</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="middle">
+        <div style="background-image:url('1.jpeg');">
+            <p>
+                <br><br>
+                Crop Recommendation Services <br>
+                <font size="5px">We Care About Your Crops</font>
+            </p>
+        </div>
+    </div>
+
+    <!-- Crop Information Section (Initially Hidden) -->
+    <div id="crop-info" class="form-section" style="display:none;">
+        <h2>Crop Information</h2>
+        <form id="crop-form">
+            <label for="name">Name of Farmer:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="n">N (Nitrogen):</label>
+            <input type="number" id="n" name="n" required />
+
+            <label for="p">P (Phosphorus):</label>
+            <input type="number" id="p" name="p" required />
+
+            <label for="k">K (Potassium):</label>
+            <input type="number" id="k" name="k" required />
+
+            <label for="ph">pH Level:</label>
+            <input type="number" id="ph" name="ph" step="0.01" required />
+
+            <label for="rainfall">Rainfall (mm):</label>
+            <input type="number" id="rainfall" name="rainfall" required />
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom">
+        <div>
+            <table>
+                <tr>
+                    <td>Crop health is our mission. At AgroGuide, we provide compassionate, top-quality care with a commitment to excellence. Our experienced team is here to offer you personalized care in a state-of-the-art facility.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bottom Up Section -->
+    <div class="bottom_up">
+        <div>
+            <table>
+                <tr>
+                    <td>Discover our comprehensive range of services, meet our experts, and explore how we prioritize your well-being every step of the way.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="nav_down">
+        <div>&copy; 2024. All rights reserved.</div>
+    </div>
+
+    <script>
+        function showCropForm() {
+            // Show the Crop Information section when the Start button is clicked
+            document.getElementById('crop-info').style.display = 'block';
+        }
+
+        document.getElementById('crop-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(e.target);
+            const formObject = {};
+
+            formData.forEach((value, key) => {
+                formObject[key] = value;
+            });
+
+            console.log(formObject);
+        });
+    </script>
+</body>
+</html>
